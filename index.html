@@ -22,7 +22,7 @@
                     </h1>
                     <p class="text-blue-100 mt-1">Analisis performa bisnis mingguan</p>
                 </div>
-                <button id="exportBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center transition">
+                <button id="exportBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
                     <i class="fas fa-file-export mr-2"></i> Export Data
                 </button>
             </div>
@@ -30,48 +30,18 @@
 
         <!-- Main Content -->
         <main class="container mx-auto px-4 py-6 flex-grow">
-            <!-- Summary Cards -->
-            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
-                    <h2 class="text-sm text-gray-500">Total Revenue</h2>
-                    <p id="totalRevenue" class="text-2xl font-bold text-gray-800 mt-2">Rp0</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500">
-                    <h2 class="text-sm text-gray-500">Total Transaksi</h2>
-                    <p id="totalTransactions" class="text-2xl font-bold text-gray-800 mt-2">0</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-purple-500">
-                    <h2 class="text-sm text-gray-500">Rata-rata Revenue</h2>
-                    <p id="avgRevenue" class="text-2xl font-bold text-gray-800 mt-2">Rp0</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500">
-                    <h2 class="text-sm text-gray-500">Health Score</h2>
-                    <p id="avgHealthScore" class="text-2xl font-bold text-gray-800 mt-2">0</p>
-                </div>
+            <!-- Executive Summary -->
+            <section id="executiveSummary" class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">📋 <strong>EXECUTIVE SUMMARY REPORT</strong> 📋</h2>
+                <!-- Summary data will be dynamically injected here -->
             </section>
 
-            <!-- Charts Section -->
-            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white rounded-xl shadow-md p-6">
-                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Trend Revenue & Transaksi</h2>
-                    <div class="chart-container">
-                        <canvas id="revenueChart"></canvas>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-md p-6">
-                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Perbandingan Revenue Harian</h2>
-                    <div class="chart-container">
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Weekly Insights -->
-            <section class="bg-white rounded-xl shadow-md p-6">
-                <h2 class="text-lg font-semibold text-gray-800 mb-4">Weekly Insights</h2>
-                <div id="weeklyInsights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Insights will be dynamically added here -->
-                </div>
+            <!-- Detail Harian -->
+            <section id="dailyDetails" class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">🗓️ <strong>DETAIL HARIAN:</strong></h3>
+                <ul id="dailyList" class="space-y-4">
+                    <!-- Daily data will be dynamically injected here -->
+                </ul>
             </section>
         </main>
 
@@ -83,6 +53,7 @@
         </footer>
     </div>
 
+    <!-- Link to external JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
