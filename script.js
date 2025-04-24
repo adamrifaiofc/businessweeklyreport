@@ -18,7 +18,10 @@ async function fetchDataFromSpreadsheet() {
             Papa.parse(csvText, {
                 header: true,
                 skipEmptyLines: true,
-                complete: (result) => resolve(result.data),
+                complete: (result) => {
+                    console.log("Data fetched:", result.data); // Menambahkan log data untuk debugging
+                    resolve(result.data);
+                },
                 error: (error) => reject(error),
             });
         });
